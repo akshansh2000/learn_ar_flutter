@@ -75,7 +75,7 @@
     file: 'sampledata/Cube/scene.gltf',
     name: 'scene',
     recenter: 'root',
-    scale: 0.016933,
+    scale: 0.005,
   },
   samplers: [
     {

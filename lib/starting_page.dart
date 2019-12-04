@@ -77,7 +77,8 @@ class _StartingPageState extends State<StartingPage> {
 
   Widget customContainer(String image, Size size, bool border) {
     return GestureDetector(
-      child: Container(
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 200),
         width: size.width * 7 / 10,
         height: size.width * 7 / 10,
         decoration: BoxDecoration(
@@ -86,13 +87,16 @@ class _StartingPageState extends State<StartingPage> {
           border: border
               ? Border.all(
                   color: Colors.redAccent,
-                  width: 4,
+                  width: 6,
                 )
               : null,
         ),
-        child: Image.asset(
-          "assets/" + image + ".png",
-          fit: BoxFit.contain,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(500),
+          child: Image.asset(
+            "assets/" + image + ".png",
+            fit: BoxFit.contain,
+          ),
         ),
       ),
       onTap: () => _bloc.modelSink.add(

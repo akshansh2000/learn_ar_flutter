@@ -26,9 +26,6 @@ class _StartingPageState extends State<StartingPage> {
         systemNavigationBarColor: Colors.white,
       ),
     );
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-    ]);
 
     final size = MediaQuery.of(context).size;
 

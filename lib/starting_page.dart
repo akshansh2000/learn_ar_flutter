@@ -81,7 +81,7 @@ class _StartingPageState extends State<StartingPage> {
               : null,
         ),
         child: Image.asset(
-          image + ".png",
+          "assets/" + image + ".png",
           fit: BoxFit.contain,
         ),
       ),

@@ -80,3 +80,9 @@ sceneform.asset('sampledata/Cube/scene.gltf',
         'default',
         'sampledata/Cube/scene.sfa',
         'src/main/assets/cubeModel')
+
+
+sceneform.asset('sampledata/Mazda RX8/scene.gltf',
+        'default',
+        'sampledata/Mazda RX8/scene.sfa',
+        'src/main/assets/carModel')

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 
@@ -19,9 +20,21 @@ class _CameraScreenState extends State<CameraScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+      ),
+    );
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     return Scaffold(
       body: ArCoreView(
         onArCoreViewCreated: _onArCoreViewCreated,
+        enableTapRecognizer: true,
       ),
     );
   }

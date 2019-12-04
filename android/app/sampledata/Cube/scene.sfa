@@ -1,0 +1,96 @@
+{
+  materials: [
+    {
+      name: 'Material_29',
+      parameters: [
+        {
+          baseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColor: 'Material_29_baseColor',
+        },
+        {
+          diffuseColorFactor: null,
+        },
+        {
+          diffuseColor: null,
+        },
+        {
+          normal: null,
+        },
+        {
+          metallicFactor: 0,
+        },
+        {
+          roughnessFactor: 1,
+        },
+        {
+          specularFactor: null,
+        },
+        {
+          glossinessFactor: null,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: 'Material_29_metallicRoughness',
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Cube/scene.gltf',
+    name: 'scene',
+    recenter: 'root',
+    scale: 0.016933,
+  },
+  samplers: [
+    {
+      file: 'sampledata/Cube/textures/Material_29_baseColor.jpg',
+      name: 'Material_29_baseColor',
+      pipeline_name: 'textures/Material_29_baseColor.jpg',
+    },
+    {
+      file: 'sampledata/Cube/textures/Material_29_metallicRoughness.png',
+      name: 'Material_29_metallicRoughness',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'textures/Material_29_metallicRoughness.png',
+    },
+  ],
+  version: '0.54:2',
+}

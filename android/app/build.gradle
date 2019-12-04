@@ -24,6 +24,7 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
     compileSdkVersion 29
@@ -69,7 +70,19 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.8.0'
-    implementation 'com.google.ar.sceneform:core:1.8.0'
-    implementation 'com.google.ar:core:1.8.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.13.0'
+    implementation 'com.google.ar.sceneform:core:1.13.0'
+    implementation 'com.google.ar:core:1.13.0'
 }
+
+
+sceneform.asset('sampledata/Alfa Romeo/scene.gltf',
+        'default',
+        'sampledata/Alfa Romeo/scene.sfa',
+        'src/main/assets/carModel')
+
+
+sceneform.asset('sampledata/Cube/scene.gltf',
+        'default',
+        'sampledata/Cube/scene.sfa',
+        'src/main/assets/cubeModel')

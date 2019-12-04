@@ -27,7 +27,7 @@ cd learn_ar_flutter/
 flutter run
 ```
 
-**Note: Make sure to have the Flutter tool in your path before executing the above. Alternatively, if on Windows, you could use the included Flutter command line tool.**
+**Note**: Make sure to have the Flutter tool [in your path](https://flutter.dev/docs/get-started/install/linux#update-your-path) before executing the above. Alternatively, if on Windows, you could use the included **Flutter Console**.
 
 ### For Contributing
 

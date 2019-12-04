@@ -76,12 +76,6 @@ dependencies {
 }
 
 
-sceneform.asset('sampledata/Alfa Romeo/scene.gltf',
-        'default',
-        'sampledata/Alfa Romeo/scene.sfa',
-        'src/main/assets/carModel')
-
-
 sceneform.asset('sampledata/Cube/scene.gltf',
         'default',
         'sampledata/Cube/scene.sfa',

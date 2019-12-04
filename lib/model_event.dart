@@ -1,3 +1,5 @@
 abstract class ModelEvent {}
 
-class AddModelEvent extends ModelEvent {}
+class CarModelSelectEvent extends ModelEvent {}
+
+class CubeModelSelectEvent extends ModelEvent {}

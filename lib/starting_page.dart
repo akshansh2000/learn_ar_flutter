@@ -80,6 +80,10 @@ class _StartingPageState extends State<StartingPage> {
                 )
               : null,
         ),
+        child: Image.asset(
+          image + ".png",
+          fit: BoxFit.contain,
+        ),
       ),
       onTap: () => _bloc.modelSink.add(
         image == strings.carPrefab

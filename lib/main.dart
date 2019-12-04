@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: Colors.white,
       ),
     );
+    SystemChrome.setEnabledSystemUIOverlays([
+      SystemUiOverlay.top,
+      SystemUiOverlay.bottom,
+    ]);
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);

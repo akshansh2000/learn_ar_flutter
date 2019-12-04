@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:learn_ar_flutter/model_event.dart';
+import 'package:learn_ar_flutter/strings.dart' as strings;
 
 class ModelBloc {
-  String _prefab = "carModel";
+  String _prefab = strings.carPrefab;
 
   final _modelStateController = StreamController<String>();
   StreamSink<String> get _inModel => _modelStateController.sink;
@@ -15,13 +16,15 @@ class ModelBloc {
   ModelBloc() {
     void _mapEventToState(ModelEvent event) {
       if (event is CarModelSelectEvent) {
-        _prefab = "carModel";
+        _prefab = strings.carPrefab;
       } else if (event is CubeModelSelectEvent) {
-        _prefab = "cubeModel";
+        _prefab = strings.cubePrefab;
       }
 
-      _modelEventController.stream.listen(_mapEventToState);
+      _inModel.add(_prefab);
     }
+
+    _modelEventController.stream.listen(_mapEventToState);
   }
 
   void dispose() {

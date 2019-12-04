@@ -16,6 +16,9 @@ class MyApp extends StatelessWidget {
         systemNavigationBarColor: Colors.white,
       ),
     );
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
 
     return MaterialApp(
       home: StartingPage(),

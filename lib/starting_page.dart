@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:learn_ar_flutter/camera_screen.dart';
 import 'package:learn_ar_flutter/model_bloc.dart';
 import 'package:learn_ar_flutter/model_event.dart';
 
@@ -22,36 +24,43 @@ class _StartingPageState extends State<StartingPage> {
       backgroundColor: Colors.white,
       body: Center(
         child: StreamBuilder(
-            stream: _bloc.selectedModel,
-            initialData: strings.carPrefab,
-            builder: (context, snapshot) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  customContainer(
-                    strings.carPrefab,
-                    size,
-                    snapshot.data == strings.carPrefab,
+          stream: _bloc.selectedModel,
+          initialData: strings.carPrefab,
+          builder: (context, snapshot) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                customContainer(
+                  strings.carPrefab,
+                  size,
+                  snapshot.data == strings.carPrefab,
+                ),
+                customContainer(
+                  strings.cubePrefab,
+                  size,
+                  snapshot.data == strings.cubePrefab,
+                ),
+                FlatButton(
+                  child: Text(
+                    strings.start.toUpperCase(),
+                    style: TextStyle(
+                      color: Colors.blueAccent,
+                      fontSize: 40,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                  customContainer(
-                    strings.cubePrefab,
-                    size,
-                    snapshot.data == strings.cubePrefab,
-                  ),
-                  FlatButton(
-                    child: Text(
-                      strings.start.toUpperCase(),
-                      style: TextStyle(
-                        color: Colors.blueAccent,
-                        fontSize: 40,
-                        fontWeight: FontWeight.w600,
+                  onPressed: () => Navigator.of(context).push(
+                    CupertinoPageRoute(
+                      builder: (builder) => CameraScreen(
+                        selectedModel: snapshot.data,
                       ),
                     ),
-                    onPressed: null,
                   ),
-                ],
-              );
-            }),
+                ),
+              ],
+            );
+          },
+        ),
       ),
     );
   }

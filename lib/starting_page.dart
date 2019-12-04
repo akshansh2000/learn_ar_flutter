@@ -79,4 +79,10 @@ class _StartingPageState extends State<StartingPage> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    _bloc.dispose();
+    super.dispose();
+  }
 }

@@ -1,3 +1,3 @@
 String start = "Start";
-String carPrefab = "carModel";
+String statuePrefab = "statueModel";
 String cubePrefab = "cubeModel";

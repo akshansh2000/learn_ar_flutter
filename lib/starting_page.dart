@@ -35,15 +35,15 @@ class _StartingPageState extends State<StartingPage> {
       body: Center(
         child: StreamBuilder(
           stream: _bloc.selectedModel,
-          initialData: strings.carPrefab,
+          initialData: strings.statuePrefab,
           builder: (context, snapshot) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 customContainer(
-                  strings.carPrefab,
+                  strings.statuePrefab,
                   size,
-                  snapshot.data == strings.carPrefab,
+                  snapshot.data == strings.statuePrefab,
                 ),
                 customContainer(
                   strings.cubePrefab,
@@ -96,8 +96,8 @@ class _StartingPageState extends State<StartingPage> {
         ),
       ),
       onTap: () => _bloc.modelSink.add(
-        image == strings.carPrefab
-            ? CarModelSelectEvent()
+        image == strings.statuePrefab
+            ? StatueModelSelectEvent()
             : CubeModelSelectEvent(),
       ),
     );

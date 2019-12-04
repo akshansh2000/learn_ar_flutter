@@ -80,3 +80,9 @@ sceneform.asset('sampledata/Cube/scene.gltf',
         'default',
         'sampledata/Cube/scene.sfa',
         'src/main/assets/cubeModel')
+
+
+sceneform.asset('sampledata/Anubis Statue/scene.gltf',
+        'default',
+        'sampledata/Anubis Statue/scene.sfa',
+        'src/main/assets/statueModel')

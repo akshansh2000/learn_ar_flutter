@@ -41,9 +41,9 @@ The app has a simple UI now, subject to change during the next couple weeks.
 
 Here is how to add 3D models to the real world:
 
-| #   | To - Do                                                   | Demonstration                                                |
-| --- | --------------------------------------------------------- | ------------------------------------------------------------ |
-| 1   | Select a model to add (tap on the icon of the model)      | ![Selecting a model](https://i.imgur.com/ugMaQCB.jpg)        |
-| 2   | Press `START`                                             | ![Tap on `START`](https://i.imgur.com/kYjxgKO.png)           |
-| 3   | Wait for the app to detect a plane                        | ![Wait for plane detection](https://i.imgur.com/zM2hVRM.jpg) |
-| 4   | Tap the part of the plane where you want to add the model | ![Tap to add model](https://i.imgur.com/sLguwBW.jpg)         |
+| #   | To - Do                                                   | Demonstration                                                   |
+| --- | --------------------------------------------------------- | --------------------------------------------------------------- |
+| 1   | Select a model to add (tap on the icon of the model)      | ![Selecting a model](https://i.imgur.com/ugMaQCB.jpg = 216x480) |
+| 2   | Press `START`                                             | ![Tap on `START`](https://i.imgur.com/kYjxgKO.png)              |
+| 3   | Wait for the app to detect a plane                        | ![Wait for plane detection](https://i.imgur.com/zM2hVRM.jpg)    |
+| 4   | Tap the part of the plane where you want to add the model | ![Tap to add model](https://i.imgur.com/sLguwBW.jpg)            |

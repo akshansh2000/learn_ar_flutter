@@ -12,7 +12,7 @@
 
 ## How To
 
-### For Testing
+### Testing
 
 If you only want to test the app and not contribute towards the development, you can simply clone the current repository and build the app.
 

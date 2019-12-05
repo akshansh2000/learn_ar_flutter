@@ -23,11 +23,23 @@ These commands will clone your forked repository, navigate into the project dire
 
 * As this project uses the *Sceneform SDK*, it is also important to have [Android Studio](https://developer.android.com/studio) installed to be able to add 3D models to the app. *However, if you do not want to add any 3D models, you can simply skip this step*.
 
-## Making a Pull Request
+## Making commits
 
 Make sure to have your commits in a separate branch from master. To switch to a new git branch, type:
 ```bash
 git checkout -b [BRANCH NAME]
 ```
 
-Add relevant images / screenshots of the output of your work, if possible.
+## Making a Pull Request
+
+* Add relevant images / screenshots of the output of your work, if possible.
+
+* If your PR solves an issue, make sure to write `Fixes #[ISSUE NUMBER]` in the description.
+
+* If your PR partially solves an issue / is a part of some issue, make sure to write `Part of #[ISSUE NUMBER]` in the description.
+
+* In case you are adding a feature whose issue doesn't yet exist, make sure to open an issue regarding the same before proceeding.
+
+## Opening Issues
+
+There are no specific rules for opening issues, however, add relevant images/screenshots of the issue, if possible.

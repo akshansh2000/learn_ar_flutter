@@ -59,6 +59,8 @@ class _StartingPageState extends State<StartingPage> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
                   onPressed: () => Navigator.of(context).push(
                     CupertinoPageRoute(
                       builder: (builder) => CameraScreen(

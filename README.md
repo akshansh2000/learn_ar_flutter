@@ -29,8 +29,8 @@ flutter run
 
 **Note**: Make sure to have the Flutter tool [in your path](https://flutter.dev/docs/get-started/install/linux#update-your-path) before executing the above. Alternatively, if on Windows, you could use the included **Flutter Console**.
 
-### For Contributing
+### Contributing
 
-If you want to contribute towards the development of the app, you are more than welcome. To do so, make sure to [create a fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) of the current repository.
+If you want to contribute towards the development of the app, you are more than welcome. To do so, make sure to [create a fork](https://github.com/akshansh2000/learn_ar_flutter/fork) of the current repository.
 
 Also, make sure to go through the [Contributor Guidelines](https://github.com/akshansh2000/learn_ar_flutter/blob/master/CONTRIBUTING.md).

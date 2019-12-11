@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 
 import 'package:learn_ar_flutter/camera_screen.dart';
@@ -40,15 +41,28 @@ class _StartingPageState extends State<StartingPage> {
             return Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                customContainer(
-                  strings.statuePrefab,
-                  size,
-                  snapshot.data == strings.statuePrefab,
-                ),
-                customContainer(
-                  strings.cubePrefab,
-                  size,
-                  snapshot.data == strings.cubePrefab,
+                Expanded(
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: customContainer(
+                          strings.statuePrefab,
+                          size,
+                          snapshot.data == strings.statuePrefab,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: customContainer(
+                          strings.cubePrefab,
+                          size,
+                          snapshot.data == strings.cubePrefab,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
                 FlatButton(
                   child: Text(

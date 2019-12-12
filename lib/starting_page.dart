@@ -71,7 +71,7 @@ class _StartingPageState extends State<StartingPage> {
                         customContainer(
                             strings.legoHousePrefab,
                             size,
-                            snapshot.data == strings.legoHousePrefab),
+                            false),
                       ],
                     ),
                   ),

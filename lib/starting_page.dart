@@ -72,6 +72,10 @@ class _StartingPageState extends State<StartingPage> {
                             strings.legoHousePrefab,
                             size,
                             false),
+                        customContainer(
+                            strings.bikePrefab,
+                            size,
+                            false),
                       ],
                     ),
                   ),

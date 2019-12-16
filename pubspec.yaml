@@ -45,6 +45,8 @@ flutter:
   assets:
    - assets/statueModel.png
    - assets/cubeModel.png
+   - assets/catModel.png
+   - assets/legoHouseModel.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

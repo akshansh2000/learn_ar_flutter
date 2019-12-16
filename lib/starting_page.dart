@@ -31,45 +31,80 @@ class _StartingPageState extends State<StartingPage> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.lightBlue[50],
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
+        centerTitle: true,
+        title: Text('Learn ARF'),
+      ),
       body: Center(
         child: StreamBuilder(
           stream: _bloc.selectedModel,
           initialData: strings.statuePrefab,
           builder: (context, snapshot) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                customContainer(
-                  strings.statuePrefab,
-                  size,
-                  snapshot.data == strings.statuePrefab,
-                ),
-                customContainer(
-                  strings.cubePrefab,
-                  size,
-                  snapshot.data == strings.cubePrefab,
-                ),
-                FlatButton(
-                  child: Text(
-                    strings.start.toUpperCase(),
-                    style: TextStyle(
-                      color: Colors.blueAccent,
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600,
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      padding: EdgeInsets.all(5.0),
+                      crossAxisSpacing: 8.0,
+                      mainAxisSpacing: 8.0,
+                      children: <Widget>[
+                        customContainer(
+                          strings.statuePrefab,
+                          size,
+                          snapshot.data == strings.statuePrefab,
+                        ),
+                        customContainer(
+                          strings.cubePrefab,
+                          size,
+                          snapshot.data == strings.cubePrefab,
+                        ),
+                        customContainer(
+                          strings.catPrefab,
+                          size,
+                          false),
+                        customContainer(
+                            strings.legoHousePrefab,
+                            size,
+                            false),
+                      ],
                     ),
                   ),
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onPressed: () => Navigator.of(context).push(
-                    CupertinoPageRoute(
-                      builder: (builder) => CameraScreen(
-                        selectedModel: snapshot.data,
+                  SizedBox(
+                    width: double.infinity,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0, left: 5.0, right: 5.0),
+                      child: FlatButton(
+                        color: Colors.deepPurple,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0)),
+                        child: Text(
+                          strings.start.toUpperCase(),
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        splashColor: Colors.purpleAccent[700],
+                        highlightColor: Colors.purple[700],
+                        onPressed: () => Navigator.of(context).push(
+                          CupertinoPageRoute(
+                            builder: (builder) => CameraScreen(
+                              selectedModel: snapshot.data,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             );
           },
         ),

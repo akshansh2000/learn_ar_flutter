@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:learn_ar_flutter/camera_screen.dart';
 import 'package:learn_ar_flutter/model_bloc.dart';
 import 'package:learn_ar_flutter/model_event.dart';
+import 'package:learn_ar_flutter/about_widget.dart';
 import 'package:learn_ar_flutter/strings.dart' as strings;
 
 class StartingPage extends StatefulWidget {
@@ -36,6 +37,13 @@ class _StartingPageState extends State<StartingPage> {
         backgroundColor: Colors.deepPurple,
         centerTitle: true,
         title: Text('Learn ARF'),
+        leading: IconButton(
+          icon: Icon(Icons.info),
+          onPressed: () => showDialog(
+            context: context,
+            builder: (context) => AboutWidget(),
+          ),
+        ),
       ),
       body: Center(
         child: StreamBuilder(
@@ -64,21 +72,16 @@ class _StartingPageState extends State<StartingPage> {
                           size,
                           snapshot.data == strings.cubePrefab,
                         ),
-                        customContainer(
-                          strings.catPrefab,
-                          size,
-                          false),
-                        customContainer(
-                            strings.legoHousePrefab,
-                            size,
-                            false),
+                        customContainer(strings.catPrefab, size, false),
+                        customContainer(strings.legoHousePrefab, size, false),
                       ],
                     ),
                   ),
                   SizedBox(
                     width: double.infinity,
                     child: Padding(
-                      padding: const EdgeInsets.only(bottom: 10.0, left: 5.0, right: 5.0),
+                      padding: const EdgeInsets.only(
+                          bottom: 10.0, left: 5.0, right: 5.0),
                       child: FlatButton(
                         color: Colors.deepPurple,
                         shape: RoundedRectangleBorder(

@@ -38,7 +38,7 @@ git checkout -b [BRANCH NAME]
 
 * If your PR partially solves an issue / is a part of some issue, make sure to write `Part of #[ISSUE NUMBER]` in the description.
 
-* In case you are adding a feature of which an issue doesn't yet exist, make sure to open an [new-issue](https://github.com/akshansh2000/learn_ar_flutter/issues/new) regarding the same before proceeding.
+* In case you are adding a feature of which an issue doesn't yet exist, make sure to open a [new issue](https://github.com/akshansh2000/learn_ar_flutter/issues/new) regarding the same before proceeding.
 
 ## Opening Issues
 

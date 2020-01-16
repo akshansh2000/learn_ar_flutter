@@ -83,8 +83,10 @@ class _StartingPageState extends State<StartingPage> {
                     ),
                   ),
                   FlatButton(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
                     child: Text(
-                      "START",
+                      strings.start.toUpperCase(),
                       style: TextStyle(
                         fontSize: 50,
                         color: Colors.deepPurple,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:learn_ar_flutter/strings.dart' as strings;
 
+import 'package:url_launcher/url_launcher.dart';
+
 class AboutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,12 @@ class AboutWidget extends StatelessWidget {
                   color: Colors.white,
                   width: 50,
                 ),
-                onTap: () async {},
+                onTap: () async {
+                  if (await canLaunch(strings.repoLink))
+                    await launch(strings.repoLink);
+                  else
+                    throw "Could not launch";
+                },
               ),
             ),
           ],

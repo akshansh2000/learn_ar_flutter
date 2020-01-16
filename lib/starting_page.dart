@@ -36,14 +36,21 @@ class _StartingPageState extends State<StartingPage> {
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
         centerTitle: true,
-        title: Text('Learn ARF'),
-        leading: IconButton(
-          icon: Icon(Icons.info),
-          onPressed: () => showDialog(
-            context: context,
-            builder: (context) => AboutWidget(),
+        title: Text(
+          'LearnARF',
+          style: TextStyle(
+            fontSize: 25,
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.info_outline),
+            onPressed: () => showDialog(
+              context: context,
+              builder: (context) => AboutWidget(),
+            ),
+          ),
+        ],
       ),
       body: Center(
         child: StreamBuilder(
@@ -72,36 +79,21 @@ class _StartingPageState extends State<StartingPage> {
                           size,
                           snapshot.data == strings.cubePrefab,
                         ),
-                        customContainer(strings.catPrefab, size, false),
-                        customContainer(strings.legoHousePrefab, size, false),
                       ],
                     ),
                   ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          bottom: 10.0, left: 5.0, right: 5.0),
-                      child: FlatButton(
+                  FlatButton(
+                    child: Text(
+                      "START",
+                      style: TextStyle(
+                        fontSize: 50,
                         color: Colors.deepPurple,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0)),
-                        child: Text(
-                          strings.start.toUpperCase(),
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 40,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        splashColor: Colors.purpleAccent[700],
-                        highlightColor: Colors.purple[700],
-                        onPressed: () => Navigator.of(context).push(
-                          CupertinoPageRoute(
-                            builder: (builder) => CameraScreen(
-                              selectedModel: snapshot.data,
-                            ),
-                          ),
+                      ),
+                    ),
+                    onPressed: () => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                        builder: (builder) => CameraScreen(
+                          selectedModel: snapshot.data,
                         ),
                       ),
                     ),

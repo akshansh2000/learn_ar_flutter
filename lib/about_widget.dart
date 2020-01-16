@@ -11,23 +11,33 @@ class AboutWidget extends StatelessWidget {
         color: Colors.white,
         fontSize: 16,
       ),
-      titleTextStyle: TextStyle(
-        color: Colors.white,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(20.0),
         ),
       ),
-      title: Text(
-        'LearnARF',
-        textAlign: TextAlign.center,
-      ),
-      content: Text(
-        strings.aboutApp,
-        textAlign: TextAlign.center,
+      content: Padding(
+        padding: EdgeInsets.only(top: 10),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text(
+              strings.aboutApp + "\n",
+              textAlign: TextAlign.center,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: GestureDetector(
+                child: Image.asset(
+                  "assets/githubLogo.png",
+                  color: Colors.white,
+                  width: 50,
+                ),
+                onTap: () async {},
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

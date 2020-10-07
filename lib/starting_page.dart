@@ -24,8 +24,8 @@ class _StartingPageState extends State<StartingPage> {
       SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: Colors.white,
-        systemNavigationBarIconBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.deepPurple,
+        systemNavigationBarIconBrightness: Brightness.light,
       ),
     );
 

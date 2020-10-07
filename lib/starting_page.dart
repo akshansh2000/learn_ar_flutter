@@ -24,8 +24,8 @@ class _StartingPageState extends State<StartingPage> {
       statusBarColor: Colors.transparent,
       // statusBarColor: Colors.deepPurple,
       statusBarIconBrightness: Brightness.dark,
-      systemNavigationBarColor: Colors.white,
-      systemNavigationBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.deepPurple,
+      systemNavigationBarIconBrightness: Brightness.light,
     ));
 
     final size = MediaQuery.of(context).size;

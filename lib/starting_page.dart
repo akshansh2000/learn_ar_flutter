@@ -20,13 +20,14 @@ class _StartingPageState extends State<StartingPage> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      // statusBarColor: Colors.deepPurple,
-      statusBarIconBrightness: Brightness.dark,
-      systemNavigationBarColor: Colors.deepPurple,
-      systemNavigationBarIconBrightness: Brightness.light,
-    ));
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.deepPurple,
+        systemNavigationBarIconBrightness: Brightness.light,
+      ),
+    );
 
     final size = MediaQuery.of(context).size;
 

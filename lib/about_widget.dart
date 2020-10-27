@@ -8,11 +8,6 @@ class AboutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.deepPurple,
-      contentTextStyle: TextStyle(
-        color: Colors.white,
-        fontSize: 16,
-      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
           Radius.circular(20.0),

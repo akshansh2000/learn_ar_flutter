@@ -24,7 +24,7 @@ class _StartingPageState extends State<StartingPage> {
       SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: Colors.deepPurple,
+        systemNavigationBarColor: Theme.of(context).primaryColor,
         systemNavigationBarIconBrightness: Brightness.light,
       ),
     );
@@ -32,15 +32,11 @@ class _StartingPageState extends State<StartingPage> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
         centerTitle: true,
         title: Text(
           'LearnARF',
-          style: TextStyle(
-            fontSize: 25,
-          ),
+          style: Theme.of(context).textTheme.headline3,
         ),
         actions: <Widget>[
           IconButton(
@@ -87,10 +83,7 @@ class _StartingPageState extends State<StartingPage> {
                     splashColor: Colors.transparent,
                     child: Text(
                       strings.start.toUpperCase(),
-                      style: TextStyle(
-                        fontSize: 50,
-                        color: Colors.deepPurple,
-                      ),
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                     onPressed: () => Navigator.of(context).push(
                       CupertinoPageRoute(
@@ -120,7 +113,7 @@ class _StartingPageState extends State<StartingPage> {
           borderRadius: BorderRadius.circular(500),
           border: border
               ? Border.all(
-                  color: Colors.redAccent,
+                  color: Theme.of(context).accentColor,
                   width: 6,
                 )
               : null,

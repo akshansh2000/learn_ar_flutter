@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:learn_ar_flutter/splash_screen.dart';
 
 import 'package:learn_ar_flutter/starting_page.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: StartingPage(),
+      home: splashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
